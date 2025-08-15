@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <h1 class="logo">Portfolio</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hello! I'm a Santhosh Kumar passionate and results-driven developer with a strong foundation in front-end and back-end technologies. I specialize in building dynamic, responsive, and user-friendly web applications. My goal is to create efficient and scalable solutions that solve real-world problems. I'm always eager to learn new technologies and take on challenging projects to expand my skillset.</p>
+            </div>
+            <div class="about-image">
+                <img src="image 1.jfif" alt="Your Photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">React</div>
+            <div class="skill-card">Node.js</div>
+            <div class="skill-card">SQL</div>
+            <div class="skill-card">Git</div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Recent Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A brief description of your project. Mention the technologies used and what the project accomplishes.</p>
+               
+            </div>
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>A brief description of your project. Mention the technologies used and what the project accomplishes.</p>
+
+            </div>
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>A brief description of your project. Mention the technologies used and what the project accomplishes.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div>
+            <button type="submit" class="submit-btn">SUBMIT</button>
+            </div>
+            <p id="form-status"></p>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        </div>
+    </footer><script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.name.value;
+            const email = form.email.value;
+            const message = form.message.value;
+            const status = document.getElementById('form-status');
+
+            
+            const mailtoLink = 'mailto:www.santhoshsandyk511@gmail.com' +
+                               '?subject=' + encodeURIComponent('New message from ' + name) +
+                               '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+
+            window.location.href = mailtoLink;
+            status.textContent = 'Message sent! Thank you for reaching out.';
+            status.style.color = 'green';
+            form.reset();
+        });
+    </script>
+</body>
+</html>
