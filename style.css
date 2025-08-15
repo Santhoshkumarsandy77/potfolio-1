@@ -62,9 +62,8 @@ section {
 
 header {
     background-color:#000000;
-    box-shadow:#ddd;
-    position:relative;
-    padding-bottom: -300px;
+    box-shadow:#ddd;;
+    padding-bottom: 50px;
 }
 
 header .container {
@@ -138,6 +137,8 @@ nav ul li a:hover {
 }
 
 .skill-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     background-color:#ffffff;
     text-align: center;
     padding: 25px;
